@@ -1,11 +1,10 @@
+vim9script
+
 # pnevma.vim -- vim colorscheme
 # Author:       Anjeel
 # Description:  https://github.com/anjeelcain/pnevma.vim
 
-vim9script
-
 highlight clear
-
 
 if exists('syntax_on')
         syntax reset
@@ -59,26 +58,31 @@ enddef
 var s_colors = {}
 
 # Normal colors 
-s_colors.base0 = ['#2f2e2d', 0] # black
-s_colors.base1 = ['#a36666', 1] # red
-s_colors.base2 = ['#90a57d', 2] # green 
-s_colors.base3 = ['#d7af87', 3] # yellow
-s_colors.base4 = ['#7fa5bd', 4] # blue 
-s_colors.base5 = ['#c79ec4', 5] # magenta
-s_colors.base6 = ['#8adbb4', 6] # cyan
-s_colors.base7 = ['#d0d0d0', 7] # white
-s_colors.base8 = ['#4a4845', 8] # black
-s_colors.base9 = ['#d78787', 9] # red
-s_colors.base10 = ['#afbea2', 10] # green 
-s_colors.base11 = ['#e4c9af', 11] # yellow
-s_colors.base12 = ['#a1bdce', 12] # blue 
-s_colors.base13 = ['#d7beda', 13] # magenta
-s_colors.base14 = ['#b1e7dd', 14] # cyan
+s_colors.base0 = ['#2f2e2d', 234] # black
+s_colors.base1 = ['#a36666', 88] # red
+s_colors.base2 = ['#90a57d', 113] # green 
+s_colors.base3 = ['#d7af87', 178] # yellow
+s_colors.base4 = ['#7fa5bd', 39] # blue 
+s_colors.base5 = ['#c79ec4', 141] # magenta
+s_colors.base6 = ['#8adbb4', 48] # cyan
+s_colors.base7 = ['#d0d0d0', 252] # white
+s_colors.base8 = ['#4a4845', 238] # black
+s_colors.base9 = ['#d78787', 174] # red
+s_colors.base10 = ['#afbea2', 193] # green 
+s_colors.base11 = ['#e4c9af', 187] # yellow
+s_colors.base12 = ['#a1bdce', 159] # blue 
+s_colors.base13 = ['#d7beda', 175] # magenta
+s_colors.base14 = ['#b1e7dd', 152] # cyan
 s_colors.base15 = ['#efefef', 15] # white
 s_colors.base00 = ['#000000', 232] # black
 s_colors.base255 = ['#ffffff', 255] # black
-s_colors.foreground = ['#dddddd', 257]
-s_colors.background = ['#1c1c1c', 256]
+
+s_colors.extra1 = ['#a280e2', 91] # blue
+s_colors.extra2 = ['#bde0fb', 153] # purple
+
+
+s_colors.foreground = ['#dddddd', 257] # fg
+s_colors.background = ['#1c1c1c', 256] # bg
 # }}}}  
 
 # Base {{{ 
@@ -88,7 +92,7 @@ HL('SignColumn', 'foreground', 'background')
 HL('SpecialKey', 'base8', '')
 HL('EndOfBuffer', '', 'background')
 HL('NonText', 'base0', '')
-HL('Directory', 'base4', '')
+HL('Directory', 'base12', '')
 HL('ErrorMsg', 'base9', 'background')
 HL('IncSearch', 'base0', 'base3', 'reverse')
 HL('CurSearch', 'base00', 'base3')
@@ -181,7 +185,7 @@ HL('SpellRare', 'base6', '', 'underline')
 HL('SpellLocal', 'base5', '', 'underline')
 # }}}
 
-# VimS {{{ 
+# Vim {{{ 
 HL('vimUserCommand', 'base9', 'background', 'bold')
 HL('vimNotation', 'base4', 'background')
 HL('vimComment', 'base8', 'background')
@@ -354,7 +358,8 @@ HL('ALEWarningSign', 'base3', '')
 # }}}
 
 # Vimwiki {{{
-# Todo.
+HL('vimwikiList', 'base5', 'background') 
+HL('vimwikiLink', 'extra2', 'background', 'underline') 
 # }}}
 
 
